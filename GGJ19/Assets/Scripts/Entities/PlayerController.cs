@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
                                 (-1 * transform.right * InputController.Instance.left) +
                                 (transform.right * InputController.Instance.right))
                                 * speedMovement
-
                                 + rBody.velocity.y * Vector3.up;
 
 
