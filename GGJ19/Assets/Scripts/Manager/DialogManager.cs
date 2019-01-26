@@ -2,16 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Question
+public class DialogMamager : MonoBehaviour
 {
-    public Expression[] question;
-    public Expression[] response;
-
-    public Question(Expression[] questions, Expression[] responses)
-    {
-
-    }
-
+    // Start is called before the first frame update
     void Start()
     {
         
