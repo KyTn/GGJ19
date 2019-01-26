@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour
@@ -58,13 +59,12 @@ public class DialogManager : MonoBehaviour
     IEnumerator RoutineCountDownBeforeResolving()
     {
         yield return new WaitForSeconds(3f);
-        if (CurrentDialog.DialogType == DialogType.InterDialogObject ||
-            CurrentDialog.DialogType == DialogType.NoDialogObject)
+        if (CurrentDialog.DialogType == DialogType.NoDialogObject)
         {
             // UIManager enable AButton press
             UIManager.Instance.AButton.gameObject.SetActive(true);
         }
-        else if (CurrentDialog.DialogType == DialogType.DialogFinalObject)
+        else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
             // UIManager enable bottom
         }
@@ -73,7 +73,39 @@ public class DialogManager : MonoBehaviour
 
     public void ResolveDialog(List<SymbolId> playerResponse = null)
     {
+        UIManager.Instance.AButton.gameObject.SetActive(false);
 
+        if (CurrentDialog.DialogType == DialogType.NoDialogObject)
+        {
+            var dialog = CurrentDialog as NoDialogObject;
+            if (dialog.OtherDialog.HasValue)
+            {
+                DialogID = dialog.OtherDialog.Value;
+                StartDialog();
+            }
+        }
+        if (CurrentDialog.DialogType == DialogType.InterDialogObject)
+        {
+            var dialog = CurrentDialog as InterDialogObject;
+            if (dialog.PlayerSymbolsNiceDialog.Any())
+            {
+                if (dialog.PlayerSymbolsNiceDialog.Count == playerResponse.Count)
+                {
+                    for (int i = 0; i < playerResponse.Count; i++)
+                    {
+
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
     }
 
 
@@ -86,22 +118,7 @@ public class DialogManager : MonoBehaviour
         }
 
     }
-
-    void Update()
-    {
-        if (CurrentDialog.DialogType == DialogType.NoDialogObject && InputController.Instance.AButton > 0)
-        {
-            // END DIALOG
-        }
-        if (CurrentDialog.DialogType == DialogType.DialogFinalObject)
-        {
-            // ???
-        }
-        if (CurrentDialog.DialogType == DialogType.InterDialogObject && InputController.Instance.AButton > 0)
-        {
-            // ???
-        }
-    }
+    
 
 
 

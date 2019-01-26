@@ -3,7 +3,7 @@
 
 public enum DialogType
 {
-    DialogFinalObject, InterDialogObject, NoDialogObject
+    InterDialogObject, NoDialogObject
 }
 
 public abstract class DialogObject
