@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Expression : MonoBehaviour
+[CreateAssetMenu]
+public class Expression : ScriptableObject
 {
     public int id;
     public string iconName;
-    //public RawImage icon;
+    public RawImage icon;
 
 
     // Start is called before the first frame update
