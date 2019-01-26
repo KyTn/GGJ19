@@ -1,14 +1,63 @@
 fileFormatVersion: 2
-guid: 5e1dbca828ed1af40890c9bfe566d61d
+guid: 7a6d2b0a590e2c64b9bb6a6b5111d3db
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idleprometeoSS_0
-    21300002: idleprometeoSS_1
-    21300004: idleprometeoSS_2
-    21300006: idleprometeoSS_3
-    21300008: idleprometeoSS_4
-    21300010: idleprometeoSS_5
-    21300012: idleprometeoSS_6
+    21300000: IDLEESPALDA_0
+    21300002: IDLEESPALDA_1
+    21300004: IDLEESPALDA_2
+    21300006: IDLEESPALDA_3
+    21300008: IDLEESPALDA_4
+    21300010: IDLEESPALDA_5
+    21300012: IDLEESPALDA_6
+    21300014: IDLEESPALDA_7
+    21300016: IDLEESPALDA_8
+    21300018: IDLEESPALDA_9
+    21300020: IDLEESPALDA_10
+    21300022: IDLEESPALDA_11
+    21300024: IDLEESPALDA_12
+    21300026: IDLEESPALDA_13
+    21300028: IDLEESPALDA_14
+    21300030: IDLEESPALDA_15
+    21300032: IDLEESPALDA_16
+    21300034: IDLEESPALDA_17
+    21300036: IDLEESPALDA_18
+    21300038: IDLEESPALDA_19
+    21300040: IDLEESPALDA_20
+    21300042: IDLEESPALDA_21
+    21300044: IDLEESPALDA_22
+    21300046: IDLEESPALDA_23
+    21300048: IDLEESPALDA_24
+    21300050: IDLEESPALDA_25
+    21300052: IDLEESPALDA_26
+    21300054: IDLEESPALDA_27
+    21300056: IDLEESPALDA_28
+    21300058: IDLEESPALDA_29
+    21300060: IDLEESPALDA_30
+    21300062: IDLEESPALDA_31
+    21300064: IDLEESPALDA_32
+    21300066: IDLEESPALDA_33
+    21300068: IDLEESPALDA_34
+    21300070: IDLEESPALDA_35
+    21300072: IDLEESPALDA_36
+    21300074: IDLEESPALDA_37
+    21300076: IDLEESPALDA_38
+    21300078: IDLEESPALDA_39
+    21300080: IDLEESPALDA_40
+    21300082: IDLEESPALDA_41
+    21300084: IDLEESPALDA_42
+    21300086: IDLEESPALDA_43
+    21300088: IDLEESPALDA_44
+    21300090: IDLEESPALDA_45
+    21300092: IDLEESPALDA_46
+    21300094: IDLEESPALDA_47
+    21300096: IDLEESPALDA_48
+    21300098: IDLEESPALDA_49
+    21300100: IDLEESPALDA_50
+    21300102: IDLEESPALDA_51
+    21300104: IDLEESPALDA_52
+    21300106: IDLEESPALDA_53
+    21300108: IDLEESPALDA_54
+    21300110: IDLEESPALDA_55
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -38,21 +87,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 650
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,141 +184,161 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idleprometeoSS_0
+      name: IDLEESPALDA_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 0
         y: 0
-        width: 307
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5d4e7df87b59a49a6686f0146f20b9
+      spriteID: 679be6ea29fee02409875a7cf496fa2a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_1
+      name: IDLEESPALDA_1
       rect:
         serializedVersion: 2
-        x: 377
+        x: 361
         y: 0
-        width: 309
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ab75a06492b7844ba734c46a3a8b24c
+      spriteID: 313232ffea4d4b646a488a40dc9112f8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_2
+      name: IDLEESPALDA_2
       rect:
         serializedVersion: 2
-        x: 727
+        x: 722
         y: 0
-        width: 312
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f28e3d0ba6be6db448f617177e6a67d9
+      spriteID: d293d9ef4d4f34741a90ddb7796159c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_3
+      name: IDLEESPALDA_3
       rect:
         serializedVersion: 2
-        x: 1073
+        x: 1083
         y: 0
-        width: 325
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 186f41d858f104449ba76b1c56e2827a
+      spriteID: 1d5088f86fbcd95498af1f47ec84699a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_4
+      name: IDLEESPALDA_4
       rect:
         serializedVersion: 2
-        x: 1422
+        x: 1444
         y: 0
-        width: 333
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a9219a2c32ecf049ba89dc8371a3967
+      spriteID: 105ce6fd7d07e194cb4710cde5a68f5a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_5
+      name: IDLEESPALDA_5
       rect:
         serializedVersion: 2
-        x: 1781
+        x: 1805
         y: 0
-        width: 323
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914f92b4fc95e7548925e78cd5ee3016
+      spriteID: e85fec2c57be37e40a26c7ae4432d55e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idleprometeoSS_6
+      name: IDLEESPALDA_6
       rect:
         serializedVersion: 2
-        x: 2138
+        x: 2166
         y: 0
-        width: 314
-        height: 936
-      alignment: 9
+        width: 361
+        height: 1006
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9d3a0fc7ee04d344af9d7bbe9ae2cab
+      spriteID: 08b397c6fdb891c428049202f3945e63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA_7
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 0
+        width: 361
+        height: 1006
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61785ffc5eeebc4c9167d9f541508f3
       vertices: []
       indices: 
       edges: []
@@ -277,7 +346,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e284c9b1e3371243a7d0376bb77f376
+    spriteID: e06879207b083684888948784fcc2066
     vertices: []
     indices: 
     edges: []

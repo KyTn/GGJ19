@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: d156beb13ea5c3d44bfe73fd0a60d3d5
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ANDARESPALDA2_0
+    21300002: ANDARESPALDA2_1
+    21300004: ANDARESPALDA2_2
+    21300006: ANDARESPALDA2_3
+    21300008: ANDARESPALDA2_4
+    21300010: ANDARESPALDA2_5
+    21300012: ANDARESPALDA2_6
+    21300014: ANDARESPALDA2_7
+    21300016: ANDARESPALDA2_8
+    21300018: ANDARESPALDA2_9
+    21300020: ANDARESPALDA2_10
+    21300022: ANDARESPALDA2_11
+    21300024: ANDARESPALDA2_12
+    21300026: ANDARESPALDA2_13
+    21300028: ANDARESPALDA2_14
+    21300030: ANDARESPALDA2_15
+    21300032: ANDARESPALDA2_16
+    21300034: ANDARESPALDA2_17
+    21300036: ANDARESPALDA2_18
+    21300038: ANDARESPALDA2_19
+    21300040: ANDARESPALDA2_20
+    21300042: ANDARESPALDA2_21
+    21300044: ANDARESPALDA2_22
+    21300046: ANDARESPALDA2_23
+    21300048: ANDARESPALDA2_24
+    21300050: ANDARESPALDA2_25
+    21300052: ANDARESPALDA2_26
+    21300054: ANDARESPALDA2_27
+    21300056: ANDARESPALDA2_28
+    21300058: ANDARESPALDA2_29
+    21300060: ANDARESPALDA2_30
+    21300062: ANDARESPALDA2_31
+    21300064: ANDARESPALDA2_32
+    21300066: ANDARESPALDA2_33
+    21300068: ANDARESPALDA2_34
+    21300070: ANDARESPALDA2_35
+    21300072: ANDARESPALDA2_36
+    21300074: ANDARESPALDA2_37
+    21300076: ANDARESPALDA2_38
+    21300078: ANDARESPALDA2_39
+    21300080: ANDARESPALDA2_40
+    21300082: ANDARESPALDA2_41
+    21300084: ANDARESPALDA2_42
+    21300086: ANDARESPALDA2_43
+    21300088: ANDARESPALDA2_44
+    21300090: ANDARESPALDA2_45
+    21300092: ANDARESPALDA2_46
+    21300094: ANDARESPALDA2_47
+    21300096: ANDARESPALDA2_48
+    21300098: ANDARESPALDA2_49
+    21300100: ANDARESPALDA2_50
+    21300102: ANDARESPALDA2_51
+    21300104: ANDARESPALDA2_52
+    21300106: ANDARESPALDA2_53
+    21300108: ANDARESPALDA2_54
+    21300110: ANDARESPALDA2_55
+    21300112: ANDARESPALDA2_56
+    21300114: ANDARESPALDA2_57
+    21300116: ANDARESPALDA2_58
+    21300118: ANDARESPALDA2_59
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 650
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ANDARESPALDA2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d0fdb453f52fc43ad9a940c0c4afe6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_1
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f294534d24546b44c92e95308d6c3611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_2
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bac988220c2284397164d0e1f56500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_3
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5dce4a8e9e97a4d904a75ec078e760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_4
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d01ee8f8da5faa449be41a80ce503b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_5
+      rect:
+        serializedVersion: 2
+        x: 3425
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87298743ace04c54cbb876dce1c64b56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_6
+      rect:
+        serializedVersion: 2
+        x: 4110
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce723d732c2ba7c43a20c7ef02dd8313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANDARESPALDA2_7
+      rect:
+        serializedVersion: 2
+        x: 4795
+        y: 0
+        width: 685
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2811859fe3ef90a4cab70fadf77160d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 928598d0b7c55b04688196c14d7b510d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
