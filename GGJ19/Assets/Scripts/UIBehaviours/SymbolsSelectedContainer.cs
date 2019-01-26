@@ -9,14 +9,7 @@ public class SymbolsSelectedContainer : MonoBehaviour
     public RectTransform SymbolsSelectedContainer_Container;
 
     List<GameObject> Symbols = new List<GameObject>();
-
-
-    void Start()
-    {
-        AddSymbol(SymbolId.FireSymbol);
-        AddSymbol(SymbolId.HeroSymbol);
-    }
-
+    
     public void AddSymbol(SymbolId symbolId)
     {
         GameObject newSymbol = Instantiate(SymbolButtonPrefab) as GameObject;

@@ -12,28 +12,25 @@ public abstract class DialogObject
     public List<SymbolId> OtherSymbolsDialog;
 }
 
-
-public class DialogFinalObject : DialogObject
+// con este termina, continua o empieza un dialogo
+// con respuesta esperada
+// un null en una response => fin dialogo
+public class InterDialogObject : DialogObject
 {
     public List<SymbolId> PlayerSymbolsNiceDialog;
     public List<SymbolId> OtherSymbolsNiceResponse;
     public List<SymbolId> OtherSymbolsBadResponse;
-
-    public override DialogType DialogType => DialogType.DialogFinalObject;
-}
-
-
-public class InterDialogObject : DialogObject
-{
-    public List<SymbolId> PlayerSymbolsNiceDialog;
-    public int OtherDialogNiceResponse;
-    public int OtherDialogBadResponse;
+    public int? OtherDialogNiceResponse;
+    public int? OtherDialogBadResponse;
 
     public override DialogType DialogType => DialogType.InterDialogObject;
 }
 
+// con este termina, continua o empieza un monologo
+// sin respuesta esperada
+// un null en una response => fin monologo
 public class NoDialogObject : DialogObject
 {
-
     public override DialogType DialogType => DialogType.NoDialogObject;
+    public int? OtherDialog;
 }
