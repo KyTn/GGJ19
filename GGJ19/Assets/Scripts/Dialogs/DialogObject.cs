@@ -18,8 +18,6 @@ public abstract class DialogObject
 public class InterDialogObject : DialogObject
 {
     public List<SymbolId> PlayerSymbolsNiceDialog;
-    public List<SymbolId> OtherSymbolsNiceResponse;
-    public List<SymbolId> OtherSymbolsBadResponse;
     public int? OtherDialogNiceResponse;
     public int? OtherDialogBadResponse;
 
