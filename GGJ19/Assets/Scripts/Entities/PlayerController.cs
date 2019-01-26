@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.InGameStates == InGameStates.InWorld)
+        {
             // Movement
             rBody.velocity = (Vector3.Normalize(transform.forward * InputController.Instance.forward) +
                                 (-1 * transform.forward * InputController.Instance.backward) +
@@ -28,15 +30,12 @@ public class PlayerController : MonoBehaviour
                                 (transform.right * InputController.Instance.right))
                                 * speedMovement
                                 + rBody.velocity.y * Vector3.up;
+        }
 
-
-            //// Rotate camera
-            //Quaternion q = Quaternion.identity;
-            //q.eulerAngles = transform.rotation.eulerAngles +
-            //                (Vector3.up * InputController.instance.mouseYPos +
-            //                Vector3.down * InputController.instance.mouseYNeg)
-            //                * speedRotate;
-            //transform.rotation = q;
+        if(InputController.Instance.AButton < 0)
+        {
+            GameManager.Instance.ChangeToInDialog();
+        }
         
     }
 

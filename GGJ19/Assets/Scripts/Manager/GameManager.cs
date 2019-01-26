@@ -1,12 +1,27 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
+public enum InGameStates
+{
+    InWorld = 0, 
+    InDialog = 1
+}
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // Start is called before the first frame update
+    public InGameStates InGameStates;
+
+    public Transform InDialogLocalPosition { get; set; }
+    public Transform InWorldLocalPosition { get; set; }
+
+
+
+
     void Awake()
     {
         if (Instance != null)
@@ -17,9 +32,23 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        InGameStates = InGameStates.InDialog;
     }
+
+    public void ChangeToInDialog()
+    {
+
+
+        CameraController.Instance.Camera.transform.DOMove(InDialogLocalPosition.position, 0.8f);
+    }
+
+    public void ChangeToInWindow()
+    {
+        CameraController.Instance.Camera.transform.DOMove(InWorldLocalPosition.position, 0.8f);
+    }
+
+
+
 }

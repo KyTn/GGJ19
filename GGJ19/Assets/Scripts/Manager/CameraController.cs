@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour {
 
-    public static CameraController instance;
+    public static CameraController Instance;
     
     public Transform target;
 
@@ -14,13 +16,12 @@ public class CameraController : MonoBehaviour {
 
     public float verticalOffset = -2;
 
-
-    Camera cam;
+    public Camera Camera;
 
     void Awake()
     {
-        instance = this;
-        cam = GetComponent<Camera>();
+        Instance = this;
+        Camera = GetComponent<Camera>();
     }
 
     Vector3 aux = new Vector3();
