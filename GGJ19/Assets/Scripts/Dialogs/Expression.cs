@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Expresion : MonoBehaviour
+public class Expression : MonoBehaviour
 {
     public int id;
     public string iconName;
