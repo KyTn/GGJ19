@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
         isIdle = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Stop)
@@ -109,7 +108,7 @@ public class PlayerController : MonoBehaviour
                 GameManager.Instance.ChangeToInWindow(() => Stop = false);
             }
         }
-        
+
     }
 
 }
