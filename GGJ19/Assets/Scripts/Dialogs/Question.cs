@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Question
 {
-    public GameObject[] question;
-    public GameObject[] response;
+    public Expression[] question;
+    public Expression[] response;
 
-    public Question(GameObject[] questions, GameObject[] responses)
+    public Question(Expression[] questions, Expression[] responses)
     {
 
     }

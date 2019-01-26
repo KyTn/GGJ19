@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InGameStates = InGameStates.InWorld;
+        //Dialog testDialog = new Dialog();
     }
 
     public void ChangeToInDialog(Action callbackWhenCompleteTween)
