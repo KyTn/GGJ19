@@ -6,9 +6,14 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class Expression : ScriptableObject
 {
-    public int id;
-    public string iconName;
-    public RawImage icon;
+    [SerializeField]
+    public int id { get; set; }
+    [SerializeField]
+    public string objectName = "Express";
+    [SerializeField]
+    public RawImage icon { get; set; }
+
+
 
 
     // Start is called before the first frame update
