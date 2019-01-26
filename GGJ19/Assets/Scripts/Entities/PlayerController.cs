@@ -11,15 +11,13 @@ public class PlayerController : MonoBehaviour
     public float speedRotate = 1f;
 
     public bool Stop; 
-
-    // Use this for initialization
+    
     void Awake()
     {
         rBody = GetComponent<Rigidbody>();
         instance = this;
     }
-
-    // Update is called once per frame
+   
     void Update()
     {
         if (Stop)
