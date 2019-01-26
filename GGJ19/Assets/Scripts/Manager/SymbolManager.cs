@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public enum SymbolId
 { 
+    AnonymousSymbol,
     HeroSymbol,
     FireSymbol,
     LeaderSymbol,
@@ -15,9 +16,11 @@ public enum SymbolId
     FishermanSymbol,
     StealSymbol,
 
+    //2nd village
     VillageSymbol,
     Food2Symbol,
 
+    // 3rd village
     DeadmanSymbol,
     DogSymbol,
     GrandmatherSymbol,
@@ -30,7 +33,8 @@ public class SymbolManager : MonoBehaviour
     public static SymbolManager Instance;
 
     public Texture2D NotFoundSymbol;
-
+    
+    public Texture2D AnonymousSymbol;
     public Texture2D HeroSymbol;
     public Texture2D FireSymbol;
     public Texture2D LeaderSymbol;
@@ -68,6 +72,9 @@ public class SymbolManager : MonoBehaviour
         Texture2D ret = null;
         switch (symbolId)
         {
+            case SymbolId.AnonymousSymbol:
+                ret = SymbolManager.Instance.AnonymousSymbol; break;
+
             case SymbolId.HeroSymbol:
                 ret = SymbolManager.Instance.HeroSymbol; break;
 

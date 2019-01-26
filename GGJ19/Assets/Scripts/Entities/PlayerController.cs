@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
     bool isUp;
     bool isIdle;
 
+
+    Animator anim;
+    SpriteRenderer spriteRenderer;
+
+
     // Use this for initialization
     void Awake()
     {
@@ -28,12 +33,17 @@ public class PlayerController : MonoBehaviour
         isDown = true;
         isUp = false;
         isIdle = false;
+
+        anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         if (Stop)
         {
+            spriteRenderer.flipX = true;
+            anim.Play("P-IdleRightUp");
             return;
         }
         if (GameManager.Instance.InGameStates == InGameStates.InWorld)
@@ -72,9 +82,9 @@ public class PlayerController : MonoBehaviour
                 isIdle = false;
             }
             if (isLeft) {
-                GetComponent<SpriteRenderer>().flipX = true;
+                spriteRenderer.flipX = true;
             } else {
-                GetComponent<SpriteRenderer>().flipX = false;
+                spriteRenderer.flipX = false;
             }
 
             string animString = "P-";
@@ -89,24 +99,14 @@ public class PlayerController : MonoBehaviour
             if (isDown)
                 animString += "Down";
 
-            Debug.Log($"AnimString: {GetComponent<SpriteRenderer>().flipX} - {rBody.velocity}");
+            //Debug.Log($"AnimString: {GetComponent<SpriteRenderer>().flipX} - {rBody.velocity}");
 
-            Animator anim = GetComponent<Animator>();
             anim.Play(animString);
         }
 
         if (InputController.Instance.AButton > 0)
         {
-            if (GameManager.Instance.InGameStates == InGameStates.InWorld)
-            {
-                Stop = true;
-                GameManager.Instance.ChangeToInDialog(() => Stop = false);
-            }
-            else if (GameManager.Instance.InGameStates == InGameStates.InDialog)
-            {
-                Stop = true;
-                GameManager.Instance.ChangeToInWindow(() => Stop = false);
-            }
+            DialogManager.Instance.StartDialog();
         }
 
     }

@@ -8,7 +8,11 @@ public class UIManager : MonoBehaviour
     public SymbolsContainer SymbolSelectablesContainer;
     public SymbolsSelectedContainer SymbolSelectedContainer;
     public RectTransform BottomPanel_Symbols;
+    public RectTransform OtherConversationSandwich;
+    public RectTransform PlayerConversationSandwich;
 
+
+    public SymbolsSelectedContainer OtherSandwichSymbolContainer;
 
     public static UIManager Instance;
 
@@ -30,6 +34,8 @@ public class UIManager : MonoBehaviour
     public void ResetUI()
     {
         ShowOrHideBottomPanel_Symbols(true);
+        ShowOrHideOtherConversationSandwich(true);
+        ShowOrHidePlayerConversationSandwich(true);
     }
 
 
@@ -41,6 +47,28 @@ public class UIManager : MonoBehaviour
                 BottomPanel_Symbols.DOAnchorPosY(-500, insta ? 0.0001f : 0.8f); break;
             case InGameStates.InDialog:
                 BottomPanel_Symbols.DOAnchorPosY(0, insta ? 0.0001f : 0.8f); break;
+        }
+    }
+
+    public void ShowOrHideOtherConversationSandwich(bool insta = false)
+    {
+        switch (GameManager.Instance.InGameStates)
+        {
+            case InGameStates.InWorld:
+                OtherConversationSandwich.DOAnchorPosX(800, insta ? 0.0001f : 0.8f); break;
+            case InGameStates.InDialog:
+                OtherConversationSandwich.DOAnchorPosX(0, insta ? 0.0001f : 0.8f); break;
+        }
+    }
+
+    public void ShowOrHidePlayerConversationSandwich(bool insta = false)
+    {
+        switch (GameManager.Instance.InGameStates)
+        {
+            case InGameStates.InWorld:
+                PlayerConversationSandwich.DOAnchorPosX(-800, insta ? 0.0001f : 0.8f); break;
+            case InGameStates.InDialog:
+                PlayerConversationSandwich.DOAnchorPosX(0, insta ? 0.0001f : 0.8f); break;
         }
     }
 
@@ -58,6 +86,12 @@ public class UIManager : MonoBehaviour
     {
 
     }
+
+    public void AddSymbolToOther(SymbolId symbolId)
+    {
+        OtherSandwichSymbolContainer.AddSymbol(symbolId);
+    }
+
 
 
     bool CanPressed_BButton = true;
