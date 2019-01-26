@@ -24,7 +24,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog()
     {
-        if(DialogID == -1)
+        if (DialogID == -1)
         {
             return;
         }
@@ -39,11 +39,11 @@ public class DialogManager : MonoBehaviour
             ShowDialog();
 
         }
-        else if(GameManager.Instance.InGameStates == InGameStates.InDialog)
+        else if (GameManager.Instance.InGameStates == InGameStates.InDialog)
         {
             ResolveDialog();
         }
-        
+
     }
 
     public void ShowDialog()
@@ -53,7 +53,7 @@ public class DialogManager : MonoBehaviour
             UIManager.Instance.AddSymbolToOther(item);
         }
         StartCoroutine(RoutineCountDownBeforeResolving());
-        
+
     }
 
     IEnumerator RoutineCountDownBeforeResolving()
@@ -67,6 +67,21 @@ public class DialogManager : MonoBehaviour
         else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
             // UIManager enable bottom
+
+
+
+
+
+        CONTINUAR POR AQUI O PETA
+
+
+
+
+
+
+
+
+
         }
     }
 
@@ -82,31 +97,56 @@ public class DialogManager : MonoBehaviour
             {
                 DialogID = dialog.OtherDialog.Value;
                 StartDialog();
+                return;
             }
         }
+
+
         if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
             var dialog = CurrentDialog as InterDialogObject;
-            if (dialog.PlayerSymbolsNiceDialog.Any())
+            if (playerResponse != null && 
+                dialog.PlayerSymbolsNiceDialog.Any() && 
+                CheckNiceResponse(dialog, playerResponse))
             {
-                if (dialog.PlayerSymbolsNiceDialog.Count == playerResponse.Count)
+                if (dialog.OtherDialogNiceResponse.HasValue)
                 {
-                    for (int i = 0; i < playerResponse.Count; i++)
-                    {
-
-                    }
-                }
-                else
-                {
-
+                    DialogID = dialog.OtherDialogNiceResponse.Value;
+                    StartDialog();
+                    return;
                 }
             }
             else
             {
-
+                if (dialog.OtherDialogBadResponse.HasValue)
+                {
+                    DialogID = dialog.OtherDialogBadResponse.Value;
+                    StartDialog();
+                    return;
+                }
             }
+            
         }
     }
+
+    private bool CheckNiceResponse(InterDialogObject dialog, List<SymbolId> playerResponse)
+    {
+        bool isNiceResponse = false;
+        if (dialog.PlayerSymbolsNiceDialog.Count == playerResponse.Count)
+        {
+            isNiceResponse = true;
+            for (int i = 0; i < playerResponse.Count; i++)
+            {
+                if (dialog.PlayerSymbolsNiceDialog[0] == playerResponse[0])
+                {
+                    isNiceResponse = false;
+                    break;
+                }
+            }
+        }
+        return isNiceResponse;
+    }
+
 
 
     public void EndDialog()
@@ -118,7 +158,7 @@ public class DialogManager : MonoBehaviour
         }
 
     }
-    
+
 
 
 
