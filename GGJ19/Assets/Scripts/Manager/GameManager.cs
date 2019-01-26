@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,10 +18,6 @@ public class GameManager : MonoBehaviour
 
     public InGameStates InGameStates;
 
-    public Transform InDialogLocalPosition { get; set; }
-    public Transform InWorldLocalPosition { get; set; }
-
-
 
 
     void Awake()
@@ -31,23 +28,34 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+        
     }
 
     private void Start()
     {
+        InGameStates = InGameStates.InWorld;
+    }
+
+    public void ChangeToInDialog(Action callbackWhenCompleteTween)
+    {
+        CameraManager.Instance.Camera.transform.DOLocalRotateQuaternion(
+            CameraManager.Instance.InDialogLocalPosition.localRotation, 0.8f);
+
+        CameraManager.Instance.Camera.transform.DOMove(
+            CameraManager.Instance.InDialogLocalPosition.position, 0.8f)
+            .OnComplete(() => callbackWhenCompleteTween?.Invoke());
         InGameStates = InGameStates.InDialog;
     }
 
-    public void ChangeToInDialog()
+    public void ChangeToInWindow(Action callbackWhenCompleteTween)
     {
+        CameraManager.Instance.Camera.transform.DOLocalRotateQuaternion(
+            CameraManager.Instance.InWorldLocalPosition.localRotation, 0.8f);
 
-
-        CameraController.Instance.Camera.transform.DOMove(InDialogLocalPosition.position, 0.8f);
-    }
-
-    public void ChangeToInWindow()
-    {
-        CameraController.Instance.Camera.transform.DOMove(InWorldLocalPosition.position, 0.8f);
+        CameraManager.Instance.Camera.transform.DOMove(
+            CameraManager.Instance.InWorldLocalPosition.position, 0.8f)
+            .OnComplete(() => callbackWhenCompleteTween?.Invoke());
+        InGameStates = InGameStates.InWorld;
     }
 
 

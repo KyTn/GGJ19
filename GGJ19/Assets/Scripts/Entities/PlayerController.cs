@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speedMovement = 1f;
     public float speedRotate = 1f;
 
+    public bool Stop; 
 
     // Use this for initialization
     void Awake()
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Stop)
+        {
+            return;
+        }
         if (GameManager.Instance.InGameStates == InGameStates.InWorld)
         {
             // Movement
@@ -30,11 +35,21 @@ public class PlayerController : MonoBehaviour
                                 (transform.right * InputController.Instance.right))
                                 * speedMovement
                                 + rBody.velocity.y * Vector3.up;
+            
         }
 
-        if(InputController.Instance.AButton < 0)
+        if(InputController.Instance.AButton > 0)
         {
-            GameManager.Instance.ChangeToInDialog();
+            if (GameManager.Instance.InGameStates == InGameStates.InWorld)
+            {
+                Stop = true;
+                GameManager.Instance.ChangeToInDialog(() => Stop = false);
+            }
+            else if (GameManager.Instance.InGameStates == InGameStates.InDialog)
+            {
+                Stop = true;
+                GameManager.Instance.ChangeToInWindow(() => Stop = false);
+            }
         }
         
     }
