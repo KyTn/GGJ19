@@ -16,6 +16,6 @@ public class NormalNPCDialog : NPCDialog
 
 public class ConversationDialog : NPCDialog
 {
-
+     
 }
 
