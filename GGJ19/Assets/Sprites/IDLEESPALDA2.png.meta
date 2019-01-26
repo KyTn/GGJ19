@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: fce17aead85b28648a29bf74655f1520
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: IDLEESPALDA2_0
+    21300002: IDLEESPALDA2_1
+    21300004: IDLEESPALDA2_2
+    21300006: IDLEESPALDA2_3
+    21300008: IDLEESPALDA2_4
+    21300010: IDLEESPALDA2_5
+    21300012: IDLEESPALDA2_6
+    21300014: IDLEESPALDA2_7
+    21300016: IDLEESPALDA2_8
+    21300018: IDLEESPALDA2_9
+    21300020: IDLEESPALDA2_10
+    21300022: IDLEESPALDA2_11
+    21300024: IDLEESPALDA2_12
+    21300026: IDLEESPALDA2_13
+    21300028: IDLEESPALDA2_14
+    21300030: IDLEESPALDA2_15
+    21300032: IDLEESPALDA2_16
+    21300034: IDLEESPALDA2_17
+    21300036: IDLEESPALDA2_18
+    21300038: IDLEESPALDA2_19
+    21300040: IDLEESPALDA2_20
+    21300042: IDLEESPALDA2_21
+    21300044: IDLEESPALDA2_22
+    21300046: IDLEESPALDA2_23
+    21300048: IDLEESPALDA2_24
+    21300050: IDLEESPALDA2_25
+    21300052: IDLEESPALDA2_26
+    21300054: IDLEESPALDA2_27
+    21300056: IDLEESPALDA2_28
+    21300058: IDLEESPALDA2_29
+    21300060: IDLEESPALDA2_30
+    21300062: IDLEESPALDA2_31
+    21300064: IDLEESPALDA2_32
+    21300066: IDLEESPALDA2_33
+    21300068: IDLEESPALDA2_34
+    21300070: IDLEESPALDA2_35
+    21300072: IDLEESPALDA2_36
+    21300074: IDLEESPALDA2_37
+    21300076: IDLEESPALDA2_38
+    21300078: IDLEESPALDA2_39
+    21300080: IDLEESPALDA2_40
+    21300082: IDLEESPALDA2_41
+    21300084: IDLEESPALDA2_42
+    21300086: IDLEESPALDA2_43
+    21300088: IDLEESPALDA2_44
+    21300090: IDLEESPALDA2_45
+    21300092: IDLEESPALDA2_46
+    21300094: IDLEESPALDA2_47
+    21300096: IDLEESPALDA2_48
+    21300098: IDLEESPALDA2_49
+    21300100: IDLEESPALDA2_50
+    21300102: IDLEESPALDA2_51
+    21300104: IDLEESPALDA2_52
+    21300106: IDLEESPALDA2_53
+    21300108: IDLEESPALDA2_54
+    21300110: IDLEESPALDA2_55
+    21300112: IDLEESPALDA2_56
+    21300114: IDLEESPALDA2_57
+    21300116: IDLEESPALDA2_58
+    21300118: IDLEESPALDA2_59
+    21300120: IDLEESPALDA2_60
+    21300122: IDLEESPALDA2_61
+    21300124: IDLEESPALDA2_62
+    21300126: IDLEESPALDA2_63
+    21300128: IDLEESPALDA2_64
+    21300130: IDLEESPALDA2_65
+    21300132: IDLEESPALDA2_66
+    21300134: IDLEESPALDA2_67
+    21300136: IDLEESPALDA2_68
+    21300138: IDLEESPALDA2_69
+    21300140: IDLEESPALDA2_70
+    21300142: IDLEESPALDA2_71
+    21300144: IDLEESPALDA2_72
+    21300146: IDLEESPALDA2_73
+    21300148: IDLEESPALDA2_74
+    21300150: IDLEESPALDA2_75
+    21300152: IDLEESPALDA2_76
+    21300154: IDLEESPALDA2_77
+    21300156: IDLEESPALDA2_78
+    21300158: IDLEESPALDA2_79
+    21300160: IDLEESPALDA2_80
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 650
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IDLEESPALDA2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a281b216cf8da489134ea6bdb2515b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66e474309ddca348a6c8e746f734883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_2
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0c333284f11ee4ca4b9c11455db1fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_3
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73e9ee337b28454c87a02376e5014b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_4
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bb677cd7ea1b0449cf884acfc05277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_5
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537d1a23cfe91a34ba27b34208ee79b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLEESPALDA2_6
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 0
+        width: 664
+        height: 1033
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2495eae2274a44dafa20695137fcf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6d0e95e2c7a823f4f94349489478eadd
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
