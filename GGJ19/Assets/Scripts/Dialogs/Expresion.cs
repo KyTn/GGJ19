@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class Expresion : MonoBehaviour
 {
-    public static GameManager Instance;
+    public int id;
+    public string iconName;
+    //public RawImage icon;
+
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        if (Instance != null)
-        {
-            Debug.LogError("GameManager already exists");
-            return;
-        }
-        Instance = this;
+        
     }
 
     // Update is called once per frame
