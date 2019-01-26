@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             .OnComplete(() => callbackWhenCompleteTween?.Invoke());
 
 
-        UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+        //UIManager.Instance.ShowOrHideBottomPanel_Symbols();
     }
 
     public void ChangeToInWindow(Action callbackWhenCompleteTween)
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             .OnComplete(() => callbackWhenCompleteTween?.Invoke());
 
 
-        UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+        //UIManager.Instance.ShowOrHideBottomPanel_Symbols();
     }
 
 
