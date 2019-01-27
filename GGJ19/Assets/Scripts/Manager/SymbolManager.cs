@@ -15,6 +15,7 @@ public enum SymbolId
     BlacksmithSymbol,
     FishermanSymbol,
     StealSymbol,
+    FurySymbol,
 
     //2nd village
     VillageSymbol,
@@ -44,6 +45,7 @@ public class SymbolManager : MonoBehaviour
     public Texture2D BlacksmithSymbol;
     public Texture2D FishermanSymbol;
     public Texture2D StealSymbol;
+    public Texture2D FurySymbol;
 
     //2nd village
     public Texture2D VillageSymbol;
@@ -101,6 +103,9 @@ public class SymbolManager : MonoBehaviour
 
             case SymbolId.StealSymbol:
                 ret = SymbolManager.Instance.StealSymbol; break;
+
+            case SymbolId.FurySymbol:
+                ret = SymbolManager.Instance.FurySymbol; break;
 
             // 2nd ---------
 
