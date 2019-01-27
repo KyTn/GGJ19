@@ -16,6 +16,9 @@ public class UIManager : MonoBehaviour
 
     public SymbolsSelectedContainer OtherSandwichSymbolContainer;
 
+    public RectTransform MapPanel;
+
+
     public static UIManager Instance;
 
     void Awake()
@@ -119,36 +122,17 @@ public class UIManager : MonoBehaviour
     {
         OtherSandwichSymbolContainer.AddSymbol(symbolId);
     }
+    
+    public void ShowOrHideMap(bool insta = false)
+    {
+        switch (GameManager.Instance.InGameStates)
+        {
+            case InGameStates.InWorld:
+                MapPanel.DOAnchorPosY(1500, insta ? 0.0001f : 0.8f); break;
 
-
-    //bool CanPressed_BButton = true;
-    //bool CanPressed_YButton = true;
-    //void Update()
-    //{
-    //    if (GameManager.Instance.InGameStates == InGameStates.InDialog)
-    //    {
-    //        if (InputController.Instance.BButton == 0)
-    //        {
-    //            CanPressed_BButton = true;
-    //        }
-
-    //        if (CanPressed_BButton && InputController.Instance.BButton > 0)
-    //        {
-    //            RemoveLastSymbolOfAnswer();
-    //            CanPressed_BButton = false;
-    //        }
-
-    //        if (InputController.Instance.YButton == 0)
-    //        {
-    //            CanPressed_YButton = true;
-    //        }
-
-    //        if (CanPressed_YButton && InputController.Instance.YButton > 0)
-    //        {
-    //            SendAnswer();
-    //            CanPressed_BButton = false;
-    //        }
-    //    }
-    //}
+            case InGameStates.InMap:
+                MapPanel.DOAnchorPosY(0, insta ? 0.0001f : 0.8f); break;
+        }
+    }
 
 }

@@ -51,6 +51,12 @@ public class PlayerController : MonoBehaviour
                 DialogManager.Instance.StartDialog();
             }
 
+            if (InputController.Instance.startButton > 0)
+            {
+                GameManager.Instance.ChangeToInMap(() => { });
+            }
+
+
             // Movement
             rBody.velocity = (Vector3.Normalize(transform.forward * InputController.Instance.forward) +
                                 (-1 * transform.forward * InputController.Instance.backward) +

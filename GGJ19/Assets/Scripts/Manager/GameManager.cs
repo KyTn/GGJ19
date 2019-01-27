@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public enum InGameStates
 {
     InWorld = 0,
-    InDialog = 1
+    InDialog = 1,
+    InMap = 2
 }
 
 public class GameManager : MonoBehaviour
@@ -53,8 +54,7 @@ public class GameManager : MonoBehaviour
             CameraManager.Instance.InDialogLocalPosition.position, 0.8f)
             .OnComplete(() => callbackWhenCompleteTween?.Invoke());
 
-
-        //UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+        UIManager.Instance.ShowOrHideMap();
     }
 
     public void ChangeToInWindow(Action callbackWhenCompleteTween)
@@ -67,8 +67,18 @@ public class GameManager : MonoBehaviour
             CameraManager.Instance.InWorldLocalPosition.position, 0.8f)
             .OnComplete(() => callbackWhenCompleteTween?.Invoke());
 
+        UIManager.Instance.ShowOrHideMap();
+    }
 
-        //UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+    public void ChangeToInMap(Action callbackWhenCompleteTween)
+    {
+        InGameStates = InGameStates.InMap;
+        PlayerController.instance.Stop = true;
+
+        MapManager.Instance.StartMap();
+
+        UIManager.Instance.ShowOrHideMap();
+
     }
 
 
