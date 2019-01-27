@@ -48,6 +48,11 @@ public class PlayerController : MonoBehaviour
         }
         if (GameManager.Instance.InGameStates == InGameStates.InWorld)
         {
+            if (InputController.Instance.AButton > 0)
+            {
+                DialogManager.Instance.StartDialog();
+            }
+
             // Movement
             rBody.velocity = (Vector3.Normalize(transform.forward * InputController.Instance.forward) +
                                 (-1 * transform.forward * InputController.Instance.backward) +
@@ -102,12 +107,9 @@ public class PlayerController : MonoBehaviour
             //Debug.Log($"AnimString: {GetComponent<SpriteRenderer>().flipX} - {rBody.velocity}");
 
             anim.Play(animString);
+            
         }
 
-        if (InputController.Instance.AButton > 0)
-        {
-            DialogManager.Instance.StartDialog();
-        }
 
     }
 

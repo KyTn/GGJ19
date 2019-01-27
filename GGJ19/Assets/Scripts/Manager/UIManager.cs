@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class UIManager : MonoBehaviour
     public RectTransform OtherConversationSandwich;
     public RectTransform PlayerConversationSandwich;
 
+    public Image AButton;
 
     public SymbolsSelectedContainer OtherSandwichSymbolContainer;
 
@@ -91,8 +93,7 @@ public class UIManager : MonoBehaviour
     {
         OtherSandwichSymbolContainer.AddSymbol(symbolId);
     }
-
-
+    
 
     bool CanPressed_BButton = true;
     bool CanPressed_YButton = true;

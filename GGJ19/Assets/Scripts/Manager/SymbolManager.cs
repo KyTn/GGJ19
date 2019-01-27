@@ -15,10 +15,21 @@ public enum SymbolId
     BlacksmithSymbol,
     FishermanSymbol,
     StealSymbol,
+    FurySymbol,
+    NiceResponseSymbol,
+    BadResponseSymbol,
 
     //2nd village
     VillageSymbol,
     Food2Symbol,
+    //TODO
+    MoreFoodSymbol,
+    FatherSymbol,
+    TravelerSymbol,
+    FarmerSymbol,
+    FamilySymbol,
+    DaySymbol,
+    NightSymbol,
 
     // 3rd village
     DeadmanSymbol,
@@ -44,10 +55,20 @@ public class SymbolManager : MonoBehaviour
     public Texture2D BlacksmithSymbol;
     public Texture2D FishermanSymbol;
     public Texture2D StealSymbol;
+    public Texture2D FurySymbol;
+    public Texture2D NiceResponseSymbol;
+    public Texture2D BadResponseSymbol;
 
     //2nd village
     public Texture2D VillageSymbol;
     public Texture2D Food2Symbol;
+    public Texture2D MoreFoodSymbol;
+    public Texture2D FatherSymbol;
+    public Texture2D TravelerSymbol;
+    public Texture2D FarmerSymbol;
+    public Texture2D FamilySymbol;
+    public Texture2D DaySymbol;
+    public Texture2D NightSymbol;
 
     // 3rd village
     public Texture2D DeadmanSymbol;
@@ -102,6 +123,15 @@ public class SymbolManager : MonoBehaviour
             case SymbolId.StealSymbol:
                 ret = SymbolManager.Instance.StealSymbol; break;
 
+            case SymbolId.FurySymbol:
+                ret = SymbolManager.Instance.FurySymbol; break;
+
+            case SymbolId.NiceResponseSymbol:
+                ret = SymbolManager.Instance.NiceResponseSymbol; break;
+
+            case SymbolId.BadResponseSymbol:
+                ret = SymbolManager.Instance.BadResponseSymbol; break;
+
             // 2nd ---------
 
             case SymbolId.VillageSymbol:
@@ -109,6 +139,27 @@ public class SymbolManager : MonoBehaviour
 
             case SymbolId.Food2Symbol:
                 ret = SymbolManager.Instance.Food2Symbol; break;
+
+            case SymbolId.MoreFoodSymbol:
+                ret = SymbolManager.Instance.MoreFoodSymbol; break;
+
+            case SymbolId.FatherSymbol:
+                ret = SymbolManager.Instance.FatherSymbol; break;
+
+            case SymbolId.TravelerSymbol:
+                ret = SymbolManager.Instance.TravelerSymbol; break;
+
+            case SymbolId.FarmerSymbol:
+                ret = SymbolManager.Instance.FarmerSymbol; break;
+
+            case SymbolId.FamilySymbol:
+                ret = SymbolManager.Instance.FamilySymbol; break;
+
+            case SymbolId.DaySymbol:
+                ret = SymbolManager.Instance.DaySymbol; break;
+
+            case SymbolId.NightSymbol:
+                ret = SymbolManager.Instance.NightSymbol; break;
 
             // 3nd ---------
             case SymbolId.DeadmanSymbol:
