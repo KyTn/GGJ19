@@ -1717,7 +1717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00006910886, y: 0}
+  m_AnchoredPosition: {x: -0.00006614341, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &481981619
@@ -2974,6 +2974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogID: -1
+  FirstDialogID: -1
 --- !u!114 &1002413414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4404,7 +4405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0001293896, y: 0}
+  m_AnchoredPosition: {x: -0.0000946349, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1473544535
@@ -6675,6 +6676,11 @@ PrefabInstance:
       propertyPath: AskingSymbol
       value: 
       objectReference: {fileID: 2800000, guid: 8b37a113dfdcccc419a87f5385b318e9, type: 3}
+    - target: {fileID: 2149390980852813206, guid: 40f7344cb3769c64a89d130299b06ea3,
+        type: 3}
+      propertyPath: FurySymbol
+      value: 
+      objectReference: {fileID: 2800000, guid: 901f34bff55d794448d9f46cb01d1397, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40f7344cb3769c64a89d130299b06ea3, type: 3}
 --- !u!1001 &7453831603474981968

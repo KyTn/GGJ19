@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class DialogManager : MonoBehaviour
     public static DialogManager Instance;
 
     public int DialogID = -1;
+    public int FirstDialogID = -1;
     DialogObject CurrentDialog = null;
 
     void Awake()
@@ -67,17 +69,22 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator RoutineCountDownBeforeResolving()
     {
-        yield return new WaitForSeconds(2f);
         if (CurrentDialog.DialogType == DialogType.NoDialogObject)
         {
+            UIManager.Instance.ShowOrHideBottomPanel_Symbols(forceShow: false);
+            UIManager.Instance.ShowOrHidePlayerConversationSandwich(forceShow: false);
+
+            yield return new WaitForSeconds(0.8f);
+
             // UIManager enable AButton press
             UIManager.Instance.AButton.gameObject.SetActive(true);
 
-            UIManager.Instance.ShowOrHideBottomPanel_Symbols(forceShow: false);
-            UIManager.Instance.ShowOrHidePlayerConversationSandwich(forceShow: false);
+            waitingResponse = true;
         }
         else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
+            yield return new WaitForSeconds(0.8f);
+
             // UIManager enable bottom
             UIManager.Instance.ShowOrHideBottomPanel_Symbols();
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
@@ -101,36 +108,18 @@ public class DialogManager : MonoBehaviour
 
         waitingResponse = false;
         UIManager.Instance.AButton.gameObject.SetActive(false);
-    
-        if (CurrentDialog.DialogType == DialogType.NoDialogObject)
+
+        if (CurrentDialog == null) return;
+        try
         {
-            var dialog = CurrentDialog as NoDialogObject;
-            
-
-            if (dialog.OtherDialog.HasValue)
+            if (CurrentDialog.DialogType == DialogType.NoDialogObject)
             {
-                DialogID = dialog.OtherDialog.Value;
-                StartDialog();
-                return;
-            }
-            else
-            {
-                EndDialog();
-            }
-        }
+                var dialog = CurrentDialog as NoDialogObject;
 
 
-        if (CurrentDialog.DialogType == DialogType.InterDialogObject)
-        {
-            var dialog = CurrentDialog as InterDialogObject;
-
-            if (playerResponse != null && 
-                dialog.PlayerSymbolsNiceDialog.Any() && 
-                CheckNiceResponse(dialog, playerResponse))
-            {
-                if (dialog.OtherDialogNiceResponse.HasValue)
+                if (dialog.OtherDialog.HasValue)
                 {
-                    DialogID = dialog.OtherDialogNiceResponse.Value;
+                    DialogID = dialog.OtherDialog.Value;
                     StartDialog();
                     return;
                 }
@@ -139,21 +128,45 @@ public class DialogManager : MonoBehaviour
                     EndDialog();
                 }
             }
-            else
+            else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
             {
-                if (dialog.OtherDialogBadResponse.HasValue)
+                var dialog = CurrentDialog as InterDialogObject;
+
+                if (playerResponse != null &&
+                    dialog.PlayerSymbolsNiceDialog.Any() &&
+                    CheckNiceResponse(dialog, playerResponse))
                 {
-                    DialogID = dialog.OtherDialogBadResponse.Value;
-                    StartDialog();
-                    return;
+                    if (dialog.OtherDialogNiceResponse.HasValue)
+                    {
+                        DialogID = dialog.OtherDialogNiceResponse.Value;
+                        StartDialog();
+                        return;
+                    }
+                    else
+                    {
+                        EndDialog();
+                    }
                 }
                 else
                 {
-                    EndDialog();
+                    if (dialog.OtherDialogBadResponse.HasValue)
+                    {
+                        DialogID = dialog.OtherDialogBadResponse.Value;
+                        StartDialog();
+                        return;
+                    }
+                    else
+                    {
+                        EndDialog();
+                    }
                 }
             }
-            
         }
+        catch (Exception e)
+        {
+
+        }
+
     }
 
     private bool CheckNiceResponse(InterDialogObject dialog, List<SymbolId> playerResponse)
@@ -182,7 +195,7 @@ public class DialogManager : MonoBehaviour
         {
             PlayerController.instance.Stop = true;
             GameManager.Instance.ChangeToInWindow(() => PlayerController.instance.Stop = false);
-            
+
             UIManager.Instance.AButton.gameObject.SetActive(false);
             UIManager.Instance.ShowOrHideBottomPanel_Symbols();
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
@@ -192,6 +205,7 @@ public class DialogManager : MonoBehaviour
             UIManager.Instance.OtherSandwichSymbolContainer.RemoveAll();
         }
         CurrentDialog = null;
+        DialogID = FirstDialogID;
     }
 
 
@@ -202,7 +216,9 @@ public class DialogManager : MonoBehaviour
     {
         if (GameManager.Instance.InGameStates == InGameStates.InDialog && CurrentDialog != null)
         {
-            if (CurrentDialog.DialogType == DialogType.NoDialogObject)
+            if (!waitingResponse) return;
+
+            if (CurrentDialog != null && CurrentDialog.DialogType == DialogType.NoDialogObject)
             {
                 if (InputController.Instance.AButton > 0)
                 {
@@ -210,7 +226,6 @@ public class DialogManager : MonoBehaviour
                 }
             }
 
-            if (!waitingResponse) return;
 
             if (InputController.Instance.AButton == 0 &&
                 InputController.Instance.BButton == 0 &&
@@ -221,7 +236,7 @@ public class DialogManager : MonoBehaviour
             }
             if (!CanPress) return;
 
-            if (CurrentDialog.DialogType == DialogType.InterDialogObject)
+            if (CurrentDialog != null && CurrentDialog.DialogType == DialogType.InterDialogObject)
             {
                 if (InputController.Instance.YButton > 0)
                 {
@@ -241,7 +256,7 @@ public class DialogManager : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
 

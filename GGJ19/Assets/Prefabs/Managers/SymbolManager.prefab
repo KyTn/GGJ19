@@ -61,17 +61,24 @@ MonoBehaviour:
   HeroSymbol: {fileID: 2800000, guid: 9bbd5064aee00c84bb643fce6a850130, type: 3}
   FireSymbol: {fileID: 2800000, guid: c6d862fd2980bf9458d1c72e423db8de, type: 3}
   LeaderSymbol: {fileID: 2800000, guid: 985c7cd8787b03e409df3381afff8d60, type: 3}
-  AskingSymbol: {fileID: 2800000, guid: 846928b4f4ccfda41b4fd0f0fb1e857f, type: 3}
-  HelpSymbol: {fileID: 2800000, guid: 01e201fb1bec4874888ac9d52013046c, type: 3}
-  FoodSymbol: {fileID: 2800000, guid: 6da710e4e17499147888c273ca6ae2b9, type: 3}
-  BlacksmithSymbol: {fileID: 2800000, guid: 5ce5f69f82eaa7642bbfca8aeffd6ff0, type: 3}
-  FishermanSymbol: {fileID: 2800000, guid: 6341a3dcc6c210e4682771586bd5eb52, type: 3}
-  StealSymbol: {fileID: 2800000, guid: 8c7f1a0b5169cc044ab07940f8695b09, type: 3}
-  FurySymbol: {fileID: 2800000, guid: 6647b065e36ee104db0eca099657f9c1, type: 3}
-  NiceResponseSymbol: {fileID: 2800000, guid: 74c3f8b0c643d0645bf1dcfb6d7c7d6c, type: 3}
-  BadResponseSymbol: {fileID: 2800000, guid: e39cd716bd1016846907b993d040d6f2, type: 3}
+  AskingSymbol: {fileID: 2800000, guid: 8b37a113dfdcccc419a87f5385b318e9, type: 3}
+  HelpSymbol: {fileID: 2800000, guid: 6ed4b1249eda85545a8221877790a6e0, type: 3}
+  FoodSymbol: {fileID: 2800000, guid: 1a5dace8318c17e4ea599913af3e2fc5, type: 3}
+  BlacksmithSymbol: {fileID: 2800000, guid: b7d24d76889e6934bb3d457f819aedd8, type: 3}
+  FishermanSymbol: {fileID: 2800000, guid: 4947b2736d4968e4789e67b5a7f4d504, type: 3}
+  StealSymbol: {fileID: 2800000, guid: 3d0981137e6b23c40a758fe1205de65b, type: 3}
+  FurySymbol: {fileID: 2800000, guid: 901f34bff55d794448d9f46cb01d1397, type: 3}
+  NiceResponseSymbol: {fileID: 2800000, guid: 6d742779addeeed4ea54459be1569f40, type: 3}
+  BadResponseSymbol: {fileID: 2800000, guid: 32a74b6fecf0e3742abb82886c0eb9d1, type: 3}
   VillageSymbol: {fileID: 0}
   Food2Symbol: {fileID: 0}
+  MoreFoodSymbol: {fileID: 0}
+  FatherSymbol: {fileID: 0}
+  TravelerSymbol: {fileID: 0}
+  FarmerSymbol: {fileID: 0}
+  FamilySymbol: {fileID: 0}
+  DaySymbol: {fileID: 0}
+  NightSymbol: {fileID: 0}
   DeadmanSymbol: {fileID: 0}
   DogSymbol: {fileID: 0}
   GrandmatherSymbol: {fileID: 0}

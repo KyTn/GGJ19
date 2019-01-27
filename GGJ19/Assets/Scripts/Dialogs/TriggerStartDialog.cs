@@ -13,6 +13,7 @@ public class TriggerStartDialog : MonoBehaviour
         {
             // Can Start conversation
             DialogManager.Instance.DialogID = DialogID;
+            DialogManager.Instance.FirstDialogID = DialogID;
         }
     }
 
@@ -23,6 +24,7 @@ public class TriggerStartDialog : MonoBehaviour
         {
             // Cannot Start conversation
             DialogManager.Instance.DialogID = -1;
+            DialogManager.Instance.FirstDialogID = -1;
         }
     }
 }
