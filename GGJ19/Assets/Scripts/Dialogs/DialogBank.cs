@@ -88,8 +88,8 @@ public class DialogBank
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.BlacksmithSymbol },
             PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.HeroSymbol },
-            OtherDialogNiceResponse = 22,
-            OtherDialogBadResponse = 21
+            OtherDialogNiceResponse = 42,
+            OtherDialogBadResponse = 41
         });
         DialogsById.Add(41, new InterDialogObject()
         {
@@ -99,8 +99,8 @@ public class DialogBank
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AskingSymbol },
             PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.FireSymbol },
-            OtherDialogNiceResponse = 23,
-            OtherDialogBadResponse = 21
+            OtherDialogNiceResponse = 43,
+            OtherDialogBadResponse = 41
         });
         DialogsById.Add(43, new NoDialogObject()
         {
