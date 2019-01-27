@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -33,7 +34,8 @@ public class SymbolsContainer : MonoBehaviour
 
         symbolButton.SymbolId = symbolId;
         button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => {
+        button.onClick.AddListener(() =>
+        {
             SymbolButton symbolButton2 = newSymbol.GetComponent<SymbolButton>();
             UIManager.Instance.SymbolSelectedContainer.AddSymbol(symbolButton2.SymbolId);
         });
@@ -43,5 +45,6 @@ public class SymbolsContainer : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(Symbols[0]);
     }
-    
+
+
 }

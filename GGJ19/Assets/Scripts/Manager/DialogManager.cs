@@ -29,6 +29,15 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
+
+        UIManager.Instance.AButton.gameObject.SetActive(false);
+        UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+        UIManager.Instance.ShowOrHidePlayerConversationSandwich();
+        UIManager.Instance.ShowOrHideOtherConversationSandwich();
+
+        UIManager.Instance.SymbolSelectedContainer.RemoveAll();
+        UIManager.Instance.OtherSandwichSymbolContainer.RemoveAll();
+
         if (GameManager.Instance.InGameStates == InGameStates.InWorld)
         {
             PlayerController.instance.Stop = true;
@@ -41,9 +50,9 @@ public class DialogManager : MonoBehaviour
         }
         else if (GameManager.Instance.InGameStates == InGameStates.InDialog)
         {
-            ResolveDialog();
+            CurrentDialog = DialogBank.GetDialogById(DialogID);
+            ShowDialog();
         }
-
     }
 
     public void ShowDialog()
@@ -58,11 +67,14 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator RoutineCountDownBeforeResolving()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         if (CurrentDialog.DialogType == DialogType.NoDialogObject)
         {
             // UIManager enable AButton press
             UIManager.Instance.AButton.gameObject.SetActive(true);
+
+            UIManager.Instance.ShowOrHideBottomPanel_Symbols(forceShow: false);
+            UIManager.Instance.ShowOrHidePlayerConversationSandwich(forceShow: false);
         }
         else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
@@ -70,22 +82,40 @@ public class DialogManager : MonoBehaviour
             UIManager.Instance.ShowOrHideBottomPanel_Symbols();
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
             UIManager.Instance.SymbolSelectablesContainer.FocusOnFirst();
+            waitingResponse = true;
         }
     }
+    private void LearnSymbols(List<SymbolId> symbols)
+    {
+        if (symbols == null) return;
 
+        GameManager.Instance.SymbolsUnlocked.AddRange(symbols);
+        GameManager.Instance.SymbolsUnlocked = GameManager.Instance.SymbolsUnlocked.Distinct().ToList();
+
+        symbols.ForEach(x => UIManager.Instance.SymbolSelectablesContainer.AddSymbol(x));
+    }
 
     public void ResolveDialog(List<SymbolId> playerResponse = null)
     {
-        UIManager.Instance.AButton.gameObject.SetActive(false);
+        LearnSymbols(CurrentDialog.UnlockSymbols);
 
+        waitingResponse = false;
+        UIManager.Instance.AButton.gameObject.SetActive(false);
+    
         if (CurrentDialog.DialogType == DialogType.NoDialogObject)
         {
             var dialog = CurrentDialog as NoDialogObject;
+            
+
             if (dialog.OtherDialog.HasValue)
             {
                 DialogID = dialog.OtherDialog.Value;
                 StartDialog();
                 return;
+            }
+            else
+            {
+                EndDialog();
             }
         }
 
@@ -93,6 +123,7 @@ public class DialogManager : MonoBehaviour
         if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
             var dialog = CurrentDialog as InterDialogObject;
+
             if (playerResponse != null && 
                 dialog.PlayerSymbolsNiceDialog.Any() && 
                 CheckNiceResponse(dialog, playerResponse))
@@ -103,6 +134,10 @@ public class DialogManager : MonoBehaviour
                     StartDialog();
                     return;
                 }
+                else
+                {
+                    EndDialog();
+                }
             }
             else
             {
@@ -111,6 +146,10 @@ public class DialogManager : MonoBehaviour
                     DialogID = dialog.OtherDialogBadResponse.Value;
                     StartDialog();
                     return;
+                }
+                else
+                {
+                    EndDialog();
                 }
             }
             
@@ -125,7 +164,7 @@ public class DialogManager : MonoBehaviour
             isNiceResponse = true;
             for (int i = 0; i < playerResponse.Count; i++)
             {
-                if (dialog.PlayerSymbolsNiceDialog[0] == playerResponse[0])
+                if (dialog.PlayerSymbolsNiceDialog[0] != playerResponse[0])
                 {
                     isNiceResponse = false;
                     break;
@@ -147,19 +186,59 @@ public class DialogManager : MonoBehaviour
             UIManager.Instance.AButton.gameObject.SetActive(false);
             UIManager.Instance.ShowOrHideBottomPanel_Symbols();
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
-        }
+            UIManager.Instance.ShowOrHideOtherConversationSandwich();
 
+            UIManager.Instance.SymbolSelectedContainer.RemoveAll();
+            UIManager.Instance.OtherSandwichSymbolContainer.RemoveAll();
+        }
+        CurrentDialog = null;
     }
 
 
+    bool CanPress = true;
+    bool waitingResponse = false;
+
     private void Update()
     {
-        if(GameManager.Instance.InGameStates == InGameStates.InDialog &&
-            CurrentDialog != null)
+        if (GameManager.Instance.InGameStates == InGameStates.InDialog && CurrentDialog != null)
         {
-            if(CurrentDialog.DialogType == DialogType.InterDialogObject)
+            if (CurrentDialog.DialogType == DialogType.NoDialogObject)
             {
+                if (InputController.Instance.AButton > 0)
+                {
+                    ResolveDialog();
+                }
+            }
 
+            if (!waitingResponse) return;
+
+            if (InputController.Instance.AButton == 0 &&
+                InputController.Instance.BButton == 0 &&
+                InputController.Instance.XButton == 0 &&
+                InputController.Instance.YButton == 0)
+            {
+                CanPress = true;
+            }
+            if (!CanPress) return;
+
+            if (CurrentDialog.DialogType == DialogType.InterDialogObject)
+            {
+                if (InputController.Instance.YButton > 0)
+                {
+                    CanPress = false;
+                    var response = UIManager.Instance.SymbolSelectedContainer.GetResponse();
+                    ResolveDialog(response);
+                }
+                else if (InputController.Instance.BButton > 0)
+                {
+                    CanPress = false;
+                    UIManager.Instance.SymbolSelectedContainer.RemoveLast();
+                }
+                else if (InputController.Instance.XButton > 0)
+                {
+                    CanPress = false;
+                    EndDialog();
+                }
             }
         }
         

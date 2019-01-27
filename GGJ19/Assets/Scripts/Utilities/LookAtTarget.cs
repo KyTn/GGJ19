@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class LookAtTarget : MonoBehaviour
 {
-    public GameObject Target;
+    public GameObject TargetInDialog;
+    public GameObject TargetInWorld;
 
     public Vector3 lookat;
     void Update()
     {
         if (GameManager.Instance.InGameStates == InGameStates.InDialog)
         {
-            lookat = Vector3.right * Target.transform.position.x +
+            lookat = Vector3.right * TargetInDialog.transform.position.x +
              Vector3.up * transform.position.y +
-             Vector3.forward * Target.transform.position.z;
+             Vector3.forward * TargetInDialog.transform.position.z;
+
+            transform.LookAt(lookat);
+        }
+        else
+        {
+            lookat = Vector3.right * TargetInWorld.transform.position.x +
+                Vector3.up * transform.position.y +
+                Vector3.forward * TargetInWorld.transform.position.z;
 
             transform.LookAt(lookat);
         }

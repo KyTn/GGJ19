@@ -41,8 +41,15 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void ShowOrHideBottomPanel_Symbols(bool insta = false)
+    public void ShowOrHideBottomPanel_Symbols(bool insta = false, bool? forceShow = null)
     {
+        if (forceShow != null)
+        {
+            var value =  forceShow.Value ? 0 : -500;
+            BottomPanel_Symbols.DOAnchorPosY(value, insta ? 0.0001f : 0.8f);
+            return;
+        }
+
         switch (GameManager.Instance.InGameStates)
         {
             case InGameStates.InWorld:
@@ -50,10 +57,21 @@ public class UIManager : MonoBehaviour
             case InGameStates.InDialog:
                 BottomPanel_Symbols.DOAnchorPosY(0, insta ? 0.0001f : 0.8f); break;
         }
+
+
+
     }
 
-    public void ShowOrHideOtherConversationSandwich(bool insta = false)
+    public void ShowOrHideOtherConversationSandwich(bool insta = false, bool? forceShow = null)
     {
+
+        if (forceShow != null)
+        {
+            var value = forceShow.Value ? 0 : 800;
+            OtherConversationSandwich.DOAnchorPosX(value, insta ? 0.0001f : 0.8f);
+            return;
+        }
+        
         switch (GameManager.Instance.InGameStates)
         {
             case InGameStates.InWorld:
@@ -63,8 +81,16 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowOrHidePlayerConversationSandwich(bool insta = false)
+    public void ShowOrHidePlayerConversationSandwich(bool insta = false, bool? forceShow = null)
     {
+
+        if (forceShow != null)
+        {
+            var value = forceShow.Value ? 0 : -800;
+            PlayerConversationSandwich.DOAnchorPosX(value, insta ? 0.0001f : 0.8f);
+            return;
+        }
+
         switch (GameManager.Instance.InGameStates)
         {
             case InGameStates.InWorld:
@@ -93,36 +119,36 @@ public class UIManager : MonoBehaviour
     {
         OtherSandwichSymbolContainer.AddSymbol(symbolId);
     }
-    
 
-    bool CanPressed_BButton = true;
-    bool CanPressed_YButton = true;
-    void Update()
-    {
-        if (GameManager.Instance.InGameStates == InGameStates.InDialog)
-        {
-            if (InputController.Instance.BButton == 0)
-            {
-                CanPressed_BButton = true;
-            }
 
-            if (CanPressed_BButton && InputController.Instance.BButton > 0)
-            {
-                RemoveLastSymbolOfAnswer();
-                CanPressed_BButton = false;
-            }
+    //bool CanPressed_BButton = true;
+    //bool CanPressed_YButton = true;
+    //void Update()
+    //{
+    //    if (GameManager.Instance.InGameStates == InGameStates.InDialog)
+    //    {
+    //        if (InputController.Instance.BButton == 0)
+    //        {
+    //            CanPressed_BButton = true;
+    //        }
 
-            if (InputController.Instance.YButton == 0)
-            {
-                CanPressed_YButton = true;
-            }
+    //        if (CanPressed_BButton && InputController.Instance.BButton > 0)
+    //        {
+    //            RemoveLastSymbolOfAnswer();
+    //            CanPressed_BButton = false;
+    //        }
 
-            if (CanPressed_YButton && InputController.Instance.YButton > 0)
-            {
-                SendAnswer();
-                CanPressed_BButton = false;
-            }
-        }
-    }
+    //        if (InputController.Instance.YButton == 0)
+    //        {
+    //            CanPressed_YButton = true;
+    //        }
+
+    //        if (CanPressed_YButton && InputController.Instance.YButton > 0)
+    //        {
+    //            SendAnswer();
+    //            CanPressed_BButton = false;
+    //        }
+    //    }
+    //}
 
 }

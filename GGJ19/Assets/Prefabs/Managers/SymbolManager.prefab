@@ -57,10 +57,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NotFoundSymbol: {fileID: 2800000, guid: 566e5a32490f3ac4d81b100791422a79, type: 3}
-  AnonymousSymbol: {fileID: 2800000, guid: f385b9c37b1dfcd4f83da898474805b8, type: 3}
-  HeroSymbol: {fileID: 2800000, guid: 4eeb252aa69297943828abd89e06a39a, type: 3}
-  FireSymbol: {fileID: 2800000, guid: beae4bc86ea46864b945fd7b7d09467d, type: 3}
-  LeaderSymbol: {fileID: 2800000, guid: 804df0e78a066ad4a85ef20e259792d4, type: 3}
+  AnonymousSymbol: {fileID: 2800000, guid: 621ab17f75ac69745b5b7a8dafafa175, type: 3}
+  HeroSymbol: {fileID: 2800000, guid: 9bbd5064aee00c84bb643fce6a850130, type: 3}
+  FireSymbol: {fileID: 2800000, guid: c6d862fd2980bf9458d1c72e423db8de, type: 3}
+  LeaderSymbol: {fileID: 2800000, guid: 985c7cd8787b03e409df3381afff8d60, type: 3}
   AskingSymbol: {fileID: 2800000, guid: 846928b4f4ccfda41b4fd0f0fb1e857f, type: 3}
   HelpSymbol: {fileID: 2800000, guid: 01e201fb1bec4874888ac9d52013046c, type: 3}
   FoodSymbol: {fileID: 2800000, guid: 6da710e4e17499147888c273ca6ae2b9, type: 3}
