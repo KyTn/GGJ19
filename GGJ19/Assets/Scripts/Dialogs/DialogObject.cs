@@ -10,6 +10,7 @@ public abstract class DialogObject
 {
     public abstract DialogType DialogType { get; }
     public List<SymbolId> OtherSymbolsDialog;
+    public List<SymbolId> UnlockSymbols;
 }
 
 // con este termina, continua o empieza un dialogo
