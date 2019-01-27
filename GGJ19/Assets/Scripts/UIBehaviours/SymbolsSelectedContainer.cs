@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class SymbolsSelectedContainer : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class SymbolsSelectedContainer : MonoBehaviour
     public GameObject SymbolButtonPrefab;
     public RectTransform SymbolsSelectedContainer_Container;
 
-    List<GameObject> Symbols = new List<GameObject>();
+    List<SelectedSymbolButton> Symbols = new List<SelectedSymbolButton>();
     
     public void AddSymbol(SymbolId symbolId)
     {
@@ -18,14 +20,19 @@ public class SymbolsSelectedContainer : MonoBehaviour
         rect.localScale = Vector3.one;
         rect.localPosition = new Vector3(rect.localPosition.x, rect.localPosition.y, 0);
 
-        Symbols.Add(newSymbol);
+
+        SelectedSymbolButton symbolButton = newSymbol.GetComponent<SelectedSymbolButton>();
+        symbolButton.SymbolId = symbolId;
+
+        Symbols.Add(symbolButton);
+
     }
 
     public void RemoveLast()
     {
         int index = Symbols.Count - 1;
         if (index < 0) return;
-        Destroy(Symbols[index]);
+        Destroy(Symbols[index].gameObject);
         Symbols.RemoveAt(index);
     }
 
@@ -35,5 +42,10 @@ public class SymbolsSelectedContainer : MonoBehaviour
         {
             RemoveLast();
         }
+    }
+
+    public List<SymbolId> GetResponse()
+    {
+        return Symbols.Select(x => x.SymbolId).ToList();
     }
 }

@@ -22,7 +22,6 @@ public enum SymbolId
     //2nd village
     VillageSymbol,
     Food2Symbol,
-    //TODO
     MoreFoodSymbol,
     FatherSymbol,
     TravelerSymbol,

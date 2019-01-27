@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     bool isIdle;
 
 
-    Animator anim;
-    SpriteRenderer spriteRenderer;
+    public Animator anim;
+    public SpriteRenderer spriteRenderer;
 
 
     // Use this for initialization
@@ -33,9 +33,7 @@ public class PlayerController : MonoBehaviour
         isDown = true;
         isUp = false;
         isIdle = false;
-
-        anim = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
