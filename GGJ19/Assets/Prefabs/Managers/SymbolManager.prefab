@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2149390980852813200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2149390980852813201}
+  - component: {fileID: 2149390980852813207}
+  - component: {fileID: 2149390980852813206}
+  m_Layer: 0
+  m_Name: SymbolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2149390980852813201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149390980852813200}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2149390980852813207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149390980852813200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232a6d45105731844aa7aa8c8f4005ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2149390980852813206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149390980852813200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65470507e68c74d40a06dbae032817b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotFoundSymbol: {fileID: 2800000, guid: 566e5a32490f3ac4d81b100791422a79, type: 3}
+  AnonymousSymbol: {fileID: 0}
+  HeroSymbol: {fileID: 0}
+  FireSymbol: {fileID: 0}
+  LeaderSymbol: {fileID: 0}
+  AskingSymbol: {fileID: 0}
+  HelpSymbol: {fileID: 0}
+  FoodSymbol: {fileID: 0}
+  BlacksmithSymbol: {fileID: 0}
+  FishermanSymbol: {fileID: 0}
+  StealSymbol: {fileID: 0}
+  FurySymbol: {fileID: 0}
+  VillageSymbol: {fileID: 0}
+  Food2Symbol: {fileID: 0}
+  DeadmanSymbol: {fileID: 0}
+  DogSymbol: {fileID: 0}
+  GrandmatherSymbol: {fileID: 0}
+  KidSymbol: {fileID: 0}
+  HunterSymbol: {fileID: 0}

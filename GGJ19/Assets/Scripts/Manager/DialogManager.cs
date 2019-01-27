@@ -69,6 +69,7 @@ public class DialogManager : MonoBehaviour
             // UIManager enable bottom
             UIManager.Instance.ShowOrHideBottomPanel_Symbols();
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
+            UIManager.Instance.SymbolSelectablesContainer.FocusOnFirst();
         }
     }
 
@@ -148,6 +149,20 @@ public class DialogManager : MonoBehaviour
             UIManager.Instance.ShowOrHidePlayerConversationSandwich();
         }
 
+    }
+
+
+    private void Update()
+    {
+        if(GameManager.Instance.InGameStates == InGameStates.InDialog &&
+            CurrentDialog != null)
+        {
+            if(CurrentDialog.DialogType == DialogType.InterDialogObject)
+            {
+
+            }
+        }
+        
     }
 
 
