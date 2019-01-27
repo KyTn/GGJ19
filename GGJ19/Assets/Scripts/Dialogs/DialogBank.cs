@@ -7,6 +7,10 @@ public class DialogBank
 
     static DialogBank()
     {
+        DialogsById.Add(0, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.FireSymbol }
+        });
         /*****************[LEADER 1 {1-19}]**********************/
         DialogsById.Add(1, new InterDialogObject()
         {
