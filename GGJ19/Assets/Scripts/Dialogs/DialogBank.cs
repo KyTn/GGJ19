@@ -25,9 +25,37 @@ public class DialogBank
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AskingSymbol },
             PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.FireSymbol },
-            OtherDialogNiceResponse = 2,
-            OtherDialogBadResponse = 2
+            OtherDialogNiceResponse = 5,
+            OtherDialogBadResponse = 4
         });
+
+        DialogsById.Add(4, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AskingSymbol, SymbolId.AskingSymbol, SymbolId.AskingSymbol }
+        });
+
+        DialogsById.Add(5, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.HeroSymbol, SymbolId.HelpSymbol, SymbolId.LeaderSymbol }
+        });
+
+        DialogsById.Add(6, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AnonymousSymbol, SymbolId.StealSymbol, SymbolId.FoodSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.FireSymbol },
+            OtherDialogNiceResponse = 7,
+            OtherDialogBadResponse = 6
+        });
+
+        DialogsById.Add(7, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { /*SymbolId.BadResponseSymbol*/ }
+        });
+        DialogsById.Add(8, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { /*SymbolId.NiceResponseSymbol*/ }
+        });
+
         /*****************[FISHERMAN 1 {20-39}]**********************/
         DialogsById.Add(20, new InterDialogObject()
         {

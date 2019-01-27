@@ -16,6 +16,8 @@ public enum SymbolId
     FishermanSymbol,
     StealSymbol,
     FurySymbol,
+    NiceResponseSymbol,
+    BadResponseSymbol,
 
     //2nd village
     VillageSymbol,
@@ -46,6 +48,8 @@ public class SymbolManager : MonoBehaviour
     public Texture2D FishermanSymbol;
     public Texture2D StealSymbol;
     public Texture2D FurySymbol;
+    public Texture2D NiceResponseSymbol;
+    public Texture2D BadResponseSymbol;
 
     //2nd village
     public Texture2D VillageSymbol;
@@ -106,6 +110,12 @@ public class SymbolManager : MonoBehaviour
 
             case SymbolId.FurySymbol:
                 ret = SymbolManager.Instance.FurySymbol; break;
+
+            case SymbolId.NiceResponseSymbol:
+                ret = SymbolManager.Instance.NiceResponseSymbol; break;
+
+            case SymbolId.BadResponseSymbol:
+                ret = SymbolManager.Instance.BadResponseSymbol; break;
 
             // 2nd ---------
 
