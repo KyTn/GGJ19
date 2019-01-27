@@ -42,7 +42,7 @@ public class DialogBank
         DialogsById.Add(6, new InterDialogObject()
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AnonymousSymbol, SymbolId.StealSymbol, SymbolId.FoodSymbol },
-            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.FireSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.BlacksmithSymbol },
             OtherDialogNiceResponse = 7,
             OtherDialogBadResponse = 6
         });
@@ -80,7 +80,7 @@ public class DialogBank
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.LeaderSymbol },
         });
 
-        /*****************[BLACKSMITH 1 {40-39}]**********************/
+        /*****************[BLACKSMITH 1 {40-59}]**********************/
         DialogsById.Add(40, new InterDialogObject()
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.BlacksmithSymbol },
@@ -102,6 +102,126 @@ public class DialogBank
         DialogsById.Add(43, new NoDialogObject()
         {
             OtherSymbolsDialog = new List<SymbolId>() { SymbolId.LeaderSymbol },
+        });
+
+        /*****************[LEADER 2 {60-79}]**********************/
+        DialogsById.Add(60, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.LeaderSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.HeroSymbol },
+            OtherDialogNiceResponse = 62,
+            OtherDialogBadResponse = 61
+        });
+
+        DialogsById.Add(61, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.FurySymbol }
+        });
+
+        DialogsById.Add(62, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AskingSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.FireSymbol },
+            OtherDialogNiceResponse = 64,
+            OtherDialogBadResponse = 63
+        });
+
+        DialogsById.Add(63, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.AskingSymbol, SymbolId.AskingSymbol, SymbolId.AskingSymbol }
+        });
+
+        DialogsById.Add(64, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.HeroSymbol, SymbolId.HelpSymbol, SymbolId.LeaderSymbol },
+            OtherDialog = 65
+        });
+
+        DialogsById.Add(65, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.MoreFoodSymbol, SymbolId.VillageSymbol },
+            OtherDialog = 66
+        });
+
+        DialogsById.Add(66, new NoDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.AnonymousSymbol },
+            OtherDialog = 67
+        });
+
+        DialogsById.Add(67, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.FatherSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.Food2Symbol, SymbolId.Food2Symbol, SymbolId.Food2Symbol },
+            OtherDialogNiceResponse = 68,
+            OtherDialogBadResponse = 70
+        });
+
+        DialogsById.Add(68, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.TravelerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.Food2Symbol },
+            OtherDialogNiceResponse = 71,
+            OtherDialogBadResponse = -1
+        });
+
+        DialogsById.Add(69, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.FarmerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.Food2Symbol },
+            OtherDialogNiceResponse = 7,
+            OtherDialogBadResponse = 8
+        });
+        ///////BAD LINE
+        DialogsById.Add(70, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.TravelerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.Food2Symbol },
+            OtherDialogNiceResponse = 71,
+            OtherDialogBadResponse = 71
+        });
+        DialogsById.Add(71, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.AskingSymbol, SymbolId.FarmerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.Food2Symbol },
+            OtherDialogNiceResponse = 8,
+            OtherDialogBadResponse = 8
+        });
+        /*****************[Father {80-85}]**********************/
+        DialogsById.Add(80, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.FatherSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.HeroSymbol },
+            OtherDialogNiceResponse = 81,
+            OtherDialogBadResponse = 2
+        });
+        DialogsById.Add(81, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol, SymbolId.FamilySymbol },
+        });
+        /*****************[Traveler {85-90}]**********************/
+        DialogsById.Add(85, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.TravelerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.HeroSymbol },
+            OtherDialogNiceResponse = 86,
+            OtherDialogBadResponse = 2
+        });
+        DialogsById.Add(86, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.DaySymbol, SymbolId.NightSymbol, SymbolId.DaySymbol, SymbolId.NightSymbol },
+        });
+        /*****************[Farmer {91-95}]**********************/
+        DialogsById.Add(91, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.FarmerSymbol },
+            PlayerSymbolsNiceDialog = new List<SymbolId>() { SymbolId.HeroSymbol },
+            OtherDialogNiceResponse = 92,
+            OtherDialogBadResponse = 2
+        });
+        DialogsById.Add(92, new InterDialogObject()
+        {
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.Food2Symbol },
         });
 
     }
