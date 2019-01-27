@@ -10,6 +10,11 @@ public class AutoStartMusic : MonoBehaviour
 
     public AudioSource asource;
 
+    private void Awake()
+    {
+        asource = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         asource.clip = music;
