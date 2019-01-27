@@ -72,7 +72,7 @@ public class DialogManager : MonoBehaviour
 
 
 
-        CONTINUAR POR AQUI O PETA
+        //CONTINUAR POR AQUI O PETA
 
 
 

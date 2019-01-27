@@ -3,7 +3,26 @@ guid: 65470507e68c74d40a06dbae032817b1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - NotFoundSymbol: {fileID: 2800000, guid: 566e5a32490f3ac4d81b100791422a79, type: 3}
+  - AnonymousSymbol: {fileID: 2800000, guid: f385b9c37b1dfcd4f83da898474805b8, type: 3}
+  - HeroSymbol: {fileID: 2800000, guid: 4eeb252aa69297943828abd89e06a39a, type: 3}
+  - FireSymbol: {fileID: 2800000, guid: beae4bc86ea46864b945fd7b7d09467d, type: 3}
+  - LeaderSymbol: {fileID: 2800000, guid: 804df0e78a066ad4a85ef20e259792d4, type: 3}
+  - AskingSymbol: {fileID: 2800000, guid: 846928b4f4ccfda41b4fd0f0fb1e857f, type: 3}
+  - HelpSymbol: {fileID: 2800000, guid: 01e201fb1bec4874888ac9d52013046c, type: 3}
+  - FoodSymbol: {fileID: 2800000, guid: ed06ff0cf74063249a92ff1da23396fe, type: 3}
+  - BlacksmithSymbol: {fileID: 2800000, guid: 5ce5f69f82eaa7642bbfca8aeffd6ff0, type: 3}
+  - FishermanSymbol: {fileID: 2800000, guid: 6341a3dcc6c210e4682771586bd5eb52, type: 3}
+  - StealSymbol: {fileID: 2800000, guid: 8c7f1a0b5169cc044ab07940f8695b09, type: 3}
+  - FurySymbol: {fileID: 2800000, guid: 6647b065e36ee104db0eca099657f9c1, type: 3}
+  - VillageSymbol: {instanceID: 0}
+  - Food2Symbol: {fileID: 2800000, guid: 6da710e4e17499147888c273ca6ae2b9, type: 3}
+  - DeadmanSymbol: {instanceID: 0}
+  - DogSymbol: {instanceID: 0}
+  - GrandmatherSymbol: {instanceID: 0}
+  - KidSymbol: {instanceID: 0}
+  - HunterSymbol: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
