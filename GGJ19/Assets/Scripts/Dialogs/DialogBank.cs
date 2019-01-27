@@ -49,11 +49,11 @@ public class DialogBank
 
         DialogsById.Add(7, new NoDialogObject()
         {
-            OtherSymbolsDialog = new List<SymbolId>() { /*SymbolId.BadResponseSymbol*/ }
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.BadResponseSymbol }
         });
         DialogsById.Add(8, new NoDialogObject()
         {
-            OtherSymbolsDialog = new List<SymbolId>() { /*SymbolId.NiceResponseSymbol*/ }
+            OtherSymbolsDialog = new List<SymbolId>() { SymbolId.NiceResponseSymbol }
         });
 
         /*****************[FISHERMAN 1 {20-39}]**********************/
