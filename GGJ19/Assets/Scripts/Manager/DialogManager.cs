@@ -67,21 +67,8 @@ public class DialogManager : MonoBehaviour
         else if (CurrentDialog.DialogType == DialogType.InterDialogObject)
         {
             // UIManager enable bottom
-
-
-
-
-
-        CONTINUAR POR AQUI O PETA
-
-
-
-
-
-
-
-
-
+            UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+            UIManager.Instance.ShowOrHidePlayerConversationSandwich();
         }
     }
 
@@ -155,6 +142,10 @@ public class DialogManager : MonoBehaviour
         {
             PlayerController.instance.Stop = true;
             GameManager.Instance.ChangeToInWindow(() => PlayerController.instance.Stop = false);
+            
+            UIManager.Instance.AButton.gameObject.SetActive(false);
+            UIManager.Instance.ShowOrHideBottomPanel_Symbols();
+            UIManager.Instance.ShowOrHidePlayerConversationSandwich();
         }
 
     }
